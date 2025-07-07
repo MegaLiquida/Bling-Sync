@@ -41,13 +41,12 @@ def get_db_connection():
     db_url = os.getenv('DATABASE_URL', DATABASE_URL)
     if db_url.startswith('sqlite://'):
         db_path = db_url.replace('sqlite://', '')
-        conn = sqlite3.connect(db_path)
+        conn = sqlite3.connect(db_path) # Se db_path for ':memory:', ele cria em memória
     else:
         # Para PostgreSQL ou outros bancos de dados, você precisaria de um driver como psycopg2
-        # Exemplo para PostgreSQL (requer psycopg2 instalado):
         import psycopg2
         conn = psycopg2.connect(db_url)
-    conn.row_factory = sqlite3.Row # Permite acessar colunas como dicionário
+    conn.row_factory = sqlite3.Row
     return conn
 
 def init_database():
