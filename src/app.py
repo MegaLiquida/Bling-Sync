@@ -20,7 +20,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 load_dotenv()
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', SECRET_KEY)
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 
 # Configuração para sessões do Flask
 app.config['SESSION_TYPE'] = 'filesystem'
