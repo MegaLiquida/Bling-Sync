@@ -3,8 +3,8 @@ from flask_session import Session
 import os
 import pandas as pd
 from api_client import search_product, get_item_details, get_access_token, refresh_access_token
-from .data_processor import read_excel_data, write_excel_data, process_products
-from .config import CLIENT_ID, CLIENT_SECRET, REDIRECT_URI, AUTH_URL, TOKEN_URL, API_BASE_URL, SECRET_KEY, UPLOAD_FOLDER, DATABASE_URL
+from data_processor import read_excel_data, write_excel_data, process_products
+from config import CLIENT_ID, CLIENT_SECRET, REDIRECT_URI, AUTH_URL, TOKEN_URL, API_BASE_URL, SECRET_KEY, UPLOAD_FOLDER, DATABASE_URL
 from dotenv import load_dotenv, set_key
 import sqlite3
 from datetime import datetime, timedelta
