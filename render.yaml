@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: listas-ean-search
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn src.app:app --bind 0.0.0.0:$PORT
+    envVars:
+      - key: CLIENT_ID
+        sync: false
+      - key: CLIENT_SECRET
+        sync: false
+      - key: ACCESS_TOKEN
+        sync: false
+      - key: REFRESH_TOKEN
+        sync: false
+      - key: REDIRECT_URI
+        value: https://listas-ean-search.onrender.com/callback
+
