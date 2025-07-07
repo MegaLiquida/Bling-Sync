@@ -3,7 +3,7 @@ import os
 # Credenciais da API do Mercado Livre
 CLIENT_ID = os.getenv("6215500289592657")
 CLIENT_SECRET = os.getenv("a2v6iXzbW9awbyzPY8oJt3RtfmwBtYPl")
-REDIRECT_URI = os.getenv("TG-686bd29002ab58000185809c-2538027629", "http://localhost:5000/callback")
+REDIRECT_URI = os.getenv("TG-686bd29002ab58000185809c-2538027629")
 
 # Endpoints da API do Mercado Livre
 AUTH_URL = 'https://auth.mercadolivre.com.br/authorization'
