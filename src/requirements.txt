@@ -1,6 +1,6 @@
 pandas
 requests
 python-dotenv
-Flask
+flask_session
 gunicorn
 openpyxl
