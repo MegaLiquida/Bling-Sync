@@ -1,0 +1,9 @@
+pandas
+requests
+python-dotenv
+
+
+
+Flask
+
+
