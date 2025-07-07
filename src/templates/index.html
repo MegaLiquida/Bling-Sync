@@ -1,0 +1,14 @@
+<!doctype html>
+<title>Busca de EANs - Mercado Livre</title>
+<h1>Status da Autenticação: {{ auth_status }}</h1>
+{% if auth_status == "Não autenticado" %}
+    <p><a href="{{ auth_link }}">Clique aqui para autenticar com o Mercado Livre</a></p>
+{% else %}
+    <p>Você está autenticado. Faça o upload da sua planilha para buscar os EANs.</p>
+    <form method="post" action="/upload" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Upload e Buscar EANs">
+    </form>
+{% endif %}
+
+
