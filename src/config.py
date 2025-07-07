@@ -13,4 +13,6 @@ API_BASE_URL = 'https://api.mercadolibre.com'
 # Site ID para o Mercado Livre Brasil
 SITE_ID = 'MLB'
 
-
+# Adicione esta linha:
+UPLOAD_FOLDER = 'uploads' # Ou o caminho que você preferir para os uploads
+DATABASE_URL = 'sqlite:///database.db' # Se você usa SQLite, ou a URL do seu banco de dados
