@@ -21,6 +21,8 @@ load_dotenv()
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
+if not app.config['SECRET_KEY']:
+    raise ValueError("A variável de ambiente 'SECRET_KEY' não está definida. Por favor, defina-a no seu ambiente ou no arquivo .env.")
 
 # Configuração para sessões do Flask
 app.config['SESSION_TYPE'] = 'filesystem'
