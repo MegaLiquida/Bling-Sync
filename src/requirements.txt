@@ -1,7 +1,0 @@
-pandas
-requests
-python-dotenv
-flask
-flask-session
-gunicorn
-openpyxl
